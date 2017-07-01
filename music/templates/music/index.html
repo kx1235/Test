@@ -1,0 +1,13 @@
+#if statement to see if there are albums
+{% if all_albums %}
+
+    <ul>
+        #for loop to display all albums and create links
+        {% for album in all_albums %}
+        <li><a href="/music/{{album.id}}/">{{album.album_title}}</a></li>
+        {% endfor %}
+    </ul>
+
+{% else %}
+    <h3> you dont have any albums</h3>
+{% endif %}
